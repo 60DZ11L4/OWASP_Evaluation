@@ -14,3 +14,8 @@ This repository contains the security remediation of a simple web application fo
 
 - **Issue**: Storing sensitive information (username and password) in `localStorage`.
 - **Fix**: Removed storage of sensitive data in `localStorage`.
+
+### Cross-Site Scripting (XSS)
+
+- **Issue**: Injecting user input directly into the DOM without sanitization.
+- **Fix**: Implemented input sanitization before injecting into the DOM.
