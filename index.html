@@ -17,22 +17,24 @@
             <button type="button" onclick="login()">Login</button>
         </form>
         <script>
-            function sanitizeInput(input) {
-                const element = document.createElement('div');
-                element.innerText = input;
-                return element.innerHTML;
-            }
-
             function login() {
                 const username = document.getElementById("username").value;
                 const password = document.getElementById("password").value;
 
+                // Placeholder for real authentication logic
+                // In a static site, we can't securely authenticate users, so this is just a placeholder
                 if (username === "admin" && password === "admin123") {
                     alert("Login successful!");
                     document.body.innerHTML += `<p>Welcome, ${sanitizeInput(username)}!</p>`;
                 } else {
                     alert("Invalid credentials!");
                 }
+            }
+
+            function sanitizeInput(input) {
+                const element = document.createElement('div');
+                element.innerText = input;
+                return element.innerHTML;
             }
         </script>
     </body>
