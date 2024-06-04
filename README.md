@@ -19,3 +19,8 @@ This repository contains the security remediation of a simple web application fo
 
 - **Issue**: Injecting user input directly into the DOM without sanitization.
 - **Fix**: Implemented input sanitization before injecting into the DOM.
+
+### Broken Authentication
+
+- **Issue**: Using hard-coded credentials for login.
+- **Fix**: Replaced hard-coded credentials with a placeholder for real authentication logic.
