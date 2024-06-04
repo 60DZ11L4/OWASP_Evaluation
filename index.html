@@ -17,12 +17,19 @@
             <button type="button" onclick="login()">Login</button>
         </form>
         <script>
+            function sanitizeInput(input) {
+                const element = document.createElement('div');
+                element.innerText = input;
+                return element.innerHTML;
+            }
+
             function login() {
                 const username = document.getElementById("username").value;
                 const password = document.getElementById("password").value;
-                
+
                 if (username === "admin" && password === "admin123") {
                     alert("Login successful!");
+                    document.body.innerHTML += `<p>Welcome, ${sanitizeInput(username)}!</p>`;
                 } else {
                     alert("Invalid credentials!");
                 }
