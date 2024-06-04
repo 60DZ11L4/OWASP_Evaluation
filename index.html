@@ -22,13 +22,19 @@
                 const password = document.getElementById("password").value;
 
                 // Placeholder for real authentication logic
-                // In a static site, we can't securely authenticate users, so this is just a placeholder
-                if (username === "admin" && password === "admin123") {
+                // E.g., send credentials to server for verification
+                if (authenticate(username, password)) {
                     alert("Login successful!");
                     document.body.innerHTML += `<p>Welcome, ${sanitizeInput(username)}!</p>`;
                 } else {
                     alert("Invalid credentials!");
                 }
+            }
+
+            function authenticate(username, password) {
+                // Implement server-side authentication
+                // For now, simulate successful login
+                return true;
             }
 
             function sanitizeInput(input) {
